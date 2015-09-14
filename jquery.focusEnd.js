@@ -1,6 +1,6 @@
 jQuery.fn.focusEnd = function()
 {
-	return $(this).each(function()
+	return this.each(function()
 	{
 		var input = $(this).focus(),
 			type = input.is('input, textarea') ? 'val' : 'html';
