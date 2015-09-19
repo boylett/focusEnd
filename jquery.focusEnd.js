@@ -1,8 +1,1 @@
-jQuery.fn.focusEnd = function()
-{
-	return this.each(function()
-	{
-		var type = $(this).focus().is('input, textarea') ? 'value' : 'innerHTML';
-		this.selectionStart = this.selectionEnd = this[type].length;
-	});
-};
+jQuery.fn.focusEnd = function(){return this.each(function(){this.selectionStart=this.selectionEnd=this[$(this).focus().is('input,textarea')?'value':'innerHTML'].length})};
